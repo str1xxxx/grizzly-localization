@@ -8,6 +8,13 @@
     "dev": "nodemon --watch \"./src/**\" --ext \"ts\" --exec npm run build",
     "clean": "rimraf ./dist"
   },
+  "keywords": [
+    "grizzly-localization"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/str1xxxx/grizzly-localization.git"
+  },
   "type": "module",
   "author": "str1x",
   "license": "ISC",
