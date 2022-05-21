@@ -11,10 +11,10 @@ How to use?
     localization.addLocalization({
       auth: {
         ru: {
-          button: 'Mama im gay',
+          button: 'Я Уэйн',
         },
         en: {
-          button: 'Mom Im gay',
+          button: 'I am Wayne',
         },
       },
     })
