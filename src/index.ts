@@ -1,8 +1,33 @@
-
 export class Localization {
-    private localizations = []
+  private localizations = {}
 
-    public add() {
+  constructor(public defaultLanguage: string) {}
 
+  public addLocalization(langObj: Object) {
+    this.localizations = { ...this.localizations, ...langObj }
+  }
+
+  public getLocalization(key: string): Object {
+    if (!this.localizations[key]) {
+      return 'Localization does not exist'
     }
+
+    if (!this.localizations[key][this.defaultLanguage]) {
+      return 'Default language does not exist'
+    }
+
+    return this.localizations[key][this.defaultLanguage]
+  }
+
+  public getAllLocalizations(): Object {
+    return this.localizations
+  }
+
+  public setDefaultLanguage(lang: string) {
+    this.defaultLanguage = lang
+  }
+
+  public getDefaultLanguage(): string {
+    return this.defaultLanguage
+  }
 }
