@@ -1,0 +1,22 @@
+{
+  "name": "grizzly-localization",
+  "version": "1.0.0",
+  "description": "Easy localization for your app",
+  "main": "src/index.ts",
+  "scripts": {
+    "build": "npm run clean && swc ./src -d ./dist",
+    "dev": "nodemon --watch \"./src/**\" --ext \"ts\" --exec npm run build",
+    "clean": "rimraf ./dist"
+  },
+  "author": "str1x",
+  "license": "ISC",
+  "dependencies": {
+    "nodemon": "^2.0.16",
+    "rimraf": "^3.0.2",
+    "typescript": "^4.6.4"
+  },
+  "devDependencies": {
+    "@swc/cli": "^0.1.57",
+    "@swc/core": "^1.2.187"
+  }
+}
