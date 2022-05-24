@@ -1,6 +1,6 @@
 {
   "name": "grizzly-localization",
-  "version": "1.0.0",
+  "version": "1.0.2",
   "description": "Easy localization for your app",
   "main": "dist/index.js",
   "scripts": {
