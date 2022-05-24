@@ -4,17 +4,17 @@
 
 How to use? 
 
-    import { Localization } from 'grizzly-localization'
+```js import { Localization } from 'grizzly-localization'
     
     const localization = new Localization('en')
     
     localization.addLocalization({
       auth: {
         ru: {
-          button: 'Я Да',
+          button: 'Привет',
         },
         en: {
-          button: 'I am yes',
+          button: 'Hello',
         },
       },
     })
@@ -22,4 +22,4 @@ How to use?
     console.log(localization.getLocalization('auth'))
     localization.setDefaultLanguage('ru')
     console.log(localization.getLocalization('auth'))
-    
+```    
