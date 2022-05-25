@@ -16,7 +16,7 @@ export class Localization {
       return 'Default language does not exist'
     }
 
-    return this.localizations[key][this.defaultLanguage]
+    return {...this.localizations[key][this.defaultLanguage], update: this.update}
   }
 
   public getAllLocalizations(): Object {
@@ -29,5 +29,9 @@ export class Localization {
 
   public getDefaultLanguage(): string {
     return this.defaultLanguage
+  }
+ 
+  public update(key: string) {
+    return this.getLocalization(key)
   }
 }

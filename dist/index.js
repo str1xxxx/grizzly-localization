@@ -49,7 +49,9 @@ export var Localization = /*#__PURE__*/ function() {
         if (!this.localizations[key][this.defaultLanguage]) {
             return "Default language does not exist";
         }
-        return this.localizations[key][this.defaultLanguage];
+        return _objectSpread({}, this.localizations[key][this.defaultLanguage], {
+            update: this.update
+        });
     };
     _proto.getAllLocalizations = function getAllLocalizations() {
         return this.localizations;
@@ -59,6 +61,9 @@ export var Localization = /*#__PURE__*/ function() {
     };
     _proto.getDefaultLanguage = function getDefaultLanguage() {
         return this.defaultLanguage;
+    };
+    _proto.update = function update(key) {
+        return console.log(this.localizations[key][this.defaultLanguage]);
     };
     return Localization;
 }();

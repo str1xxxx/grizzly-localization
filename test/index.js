@@ -5,14 +5,22 @@ const localization = new Localization('en')
 localization.addLocalization({
   auth: {
     ru: {
-      button: 'Mama im gay',
+      button: 'Привет',
     },
     en: {
-      button: 'Mom Im gay',
+      button: 'Hello',
     },
+    ua: {
+      button: 'Привіт'
+    }
   },
 })
+let locale = localization.getLocalization('auth')
 
-console.log(localization.getLocalization('auth'))
+console.log(locale.button)
+
 localization.setDefaultLanguage('ru')
-console.log(localization.getLocalization('auth'))
+locale = localization.update()
+
+
+console.log(locale.button)
