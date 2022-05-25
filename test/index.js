@@ -20,7 +20,7 @@ let locale = localization.getLocalization('auth')
 console.log(locale.button)
 
 localization.setDefaultLanguage('ru')
-locale = localization.update()
+locale = localization.update('auth')
 
 
 console.log(locale.button)
