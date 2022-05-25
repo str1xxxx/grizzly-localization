@@ -9,7 +9,8 @@
     "clean": "rimraf ./dist"
   },
   "keywords": [
-    "grizzly-localization"
+    "grizzly-localization",
+    "localization"
   ],
   "repository": {
     "type": "git",
