@@ -51,10 +51,10 @@ function useGrizzly(namespace = '') {
   return { t: tNamespaced, changeLanguage, availableLanguages }
 }
 
-export function initGrizzly(options) {
+function initGrizzly(options) {
   if (!instance) {
     instance = { currentLang: options.lang, locales: options.locales }
   }
 }
 
-export { t, changeLanguage, availableLanguages, useGrizzly }
+export { t, changeLanguage, availableLanguages, useGrizzly, initGrizzly }
