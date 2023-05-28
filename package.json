@@ -1,27 +1,26 @@
 {
   "name": "grizzly-localization",
   "version": "1.1.0",
-  "description": "Easy localization for your app",
+  "description": "Grizzly: A powerful, yet easy-to-use library for dynamic language translation in JavaScript applications.",
   "main": "index.js",
-  "scripts": {},
-  "keywords": [
-    "grizzly-localization",
-    "localization"
-  ],
+  "types": "index.d.ts",
   "repository": {
     "type": "git",
-    "url": "https://github.com/str1xxxx/grizzly-localization.git"
+    "url": "git+https://github.com/str1xxxx/grizzly-localization.git"
   },
-  "type": "module",
+  "keywords": [
+    "javascript",
+    "i18n",
+    "translation",
+    "localization",
+    "internationalization",
+    "dynamic-language-switching",
+    "grizzly"
+  ],
   "author": "str1x",
-  "license": "ISC",
-  "dependencies": {
-    "nodemon": "^2.0.16",
-    "rimraf": "^3.0.2",
-    "typescript": "^4.6.4"
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/str1xxxx/grizzly-localization/issues"
   },
-  "devDependencies": {
-    "@swc/cli": "^0.1.57",
-    "@swc/core": "^1.2.187"
-  }
+  "homepage": "https://github.com/str1xxxx/grizzly-localization#readme"
 }

@@ -1,7 +1,7 @@
 declare module 'grizzly-localization' {
   type InterpolationValues = Record<string, string | number>
 
-  type Locales = Record<string, Record<string, string>>
+  type Locales = Record<string, Record<string, unknown>>
 
   interface GrizzlyOptions {
     lang: string
