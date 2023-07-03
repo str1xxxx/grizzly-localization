@@ -36,11 +36,7 @@ function changeLanguage(lang) {
     throw new Error('Grizzly has not been initialized. Please call initGrizzly first.')
   }
 
-  if (instance.locales[lang]) {
-    instance.currentLang = lang
-  } else {
-    console.warn(`The language "${lang}" is not loaded in Grizzly.`)
-  }
+  instance.currentLang = lang
 }
 
 function availableLanguages() {
