@@ -6,7 +6,7 @@ function t(key, interpolationValues) {
   }
 
   const keys = key.split('.')
-  let current = instance.locales[instance.currentLang]
+  let current = instance.locales
   for (let i = 0; i < keys.length; i++) {
     current = current[keys[i]]
     if (current === undefined) {
