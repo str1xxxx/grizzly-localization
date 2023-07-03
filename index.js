@@ -14,6 +14,14 @@ function t(key, interpolationValues) {
     }
   }
 
+  if (typeof current === 'object') {
+    // Если значение ключа является объектом, получите текущий язык из объекта и верните его
+    current = current[instance.currentLang]
+    if (current === undefined) {
+      return key
+    }
+  }
+
   if (interpolationValues) {
     for (const placeholder in interpolationValues) {
       current = current.replace(new RegExp(`{${placeholder}}`, 'g'), interpolationValues[placeholder])
@@ -21,18 +29,6 @@ function t(key, interpolationValues) {
   }
 
   return current
-}
-
-function changeLanguage(lang) {
-  if (!instance) {
-    throw new Error('Grizzly has not been initialized. Please call initGrizzly first.')
-  }
-
-  if (instance.locales[lang]) {
-    instance.currentLang = lang
-  } else {
-    console.warn(`The language "${lang}" is not loaded in Grizzly.`)
-  }
 }
 
 function availableLanguages() {
