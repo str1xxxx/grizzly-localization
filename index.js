@@ -31,6 +31,18 @@ function t(key, interpolationValues) {
   return current
 }
 
+function changeLanguage(lang) {
+  if (!instance) {
+    throw new Error('Grizzly has not been initialized. Please call initGrizzly first.')
+  }
+
+  if (instance.locales[lang]) {
+    instance.currentLang = lang
+  } else {
+    console.warn(`The language "${lang}" is not loaded in Grizzly.`)
+  }
+}
+
 function availableLanguages() {
   if (!instance) {
     throw new Error('Grizzly has not been initialized. Please call initGrizzly first.')
